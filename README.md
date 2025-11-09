@@ -8,6 +8,7 @@
 ![Python](https://img.shields.io/badge/python-3.8%2B-green?style=for-the-badge)
 ![Downloads](https://static.pepy.tech/badge/zaicore?style=for-the-badge)
 ![License](https://img.shields.io/github/license/muhammadzaidanf/ZAI-Core?style=for-the-badge)
+![Made in Indonesia](https://img.shields.io/badge/Made%20in-Indonesia-red?style=for-the-badge)
 
 </div>
 
