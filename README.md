@@ -1,8 +1,7 @@
 <div align="center">
 
-# 🧠 ZAI Core
-
-### _A Lightweight Modular AI Framework for Learning and Experimentation_
+# 🧠 ZAI Core  
+### *v0.2.0 — Persistent Brain Update*
 
 ![PyPI](https://img.shields.io/pypi/v/zaicore?label=PyPI%20Version&style=for-the-badge&color=blue)
 ![Python](https://img.shields.io/badge/python-3.8%2B-green?style=for-the-badge)
@@ -15,121 +14,132 @@
 ---
 
 ## 🧩 Overview
+**ZAI Core** is a modular Python-based AI framework built by **Muhammad Zaidan**.  
+Version **v0.2.0** introduces **Persistent Memory**, allowing ZAI Core to remember what it learns — permanently.
 
-**ZAI Core (Zaidan Artificial Intelligence Core)** is a lightweight and modular framework built for learning, experimentation, and understanding how AI systems can _think_ and _adapt_ from the ground up.  
-Designed by [**Muhammad Zaidan**](https://github.com/muhammadzaidanf), ZAI Core aims to become the foundation for future AI projects — from intelligent agents to adaptive decision systems.
-
-> “Build systems that don’t just compute — but learn.”
-
----
-
-## 🚀 Features
-
-✅ **Lightweight AI Core** – simple, readable, modular structure  
-✅ **Learn & Recall System** – simulate a basic memory process  
-✅ **Extensible Architecture** – easy to integrate into other projects  
-✅ **Open-Source** – clean and documented for public learning
+> “Now your AI remembers — even after shutdown.”
 
 ---
 
-## 🧠 Quick Start
+## ⚙️ Features (v0.2.0)
+- 🧠 **Persistent Brain** — Memory is saved in `zai_memory.json`  
+- 💾 **Auto Save System** — Every `learn()` updates memory instantly  
+- 🔍 **Recall Intelligence** — Retrieve old knowledge anytime  
+- 🧩 **Forget & Wipe** — Erase single or all stored memories  
+- 🧠 **CLI Mode** — Use ZAI Core directly from terminal  
+- 🔧 **Configurable Path** — Custom memory file location  
 
-### 1️⃣ Installation
+---
 
+## 🧱 Folder Structure
+```text
+./ZAI-Core/
+│
+├── ./zaicore/
+│   ├── ./__init__.py
+│   ├── ./__main__.py          # CLI Interface
+│   ├── ./core.py              # Main AI Core Logic (Persistent Memory)
+│   └── ./utils/
+│       ├── ./__init__.py
+│       └── ./data_handler.py  # Memory I/O Handler
+│
+├── ./docs/
+│   └── ./architecture.md
+│
+├── ./setup.py
+├── ./setup.cfg
+├── ./LICENSE
+└── ./README.md
+```
+
+---
+
+## 💻 Quick Start
+
+### Installation
 ```bash
 pip install zaicore
 ```
 
-### 2️⃣ Basic Example
-
+### Example (Python)
 ```python
 from zaicore import ZAICore
 
 ai = ZAICore()
-ai.learn("goal", "to make Indonesia an AI powerhouse")
-ai.recall("goal")
+
+ai.learn("mission", "to build adaptive AI frameworks")
+ai.learn("creator", "Muhammad Zaidan")
+
+ai.recall("mission")
+ai.recall("creator")
 ```
 
 **Output:**
-
 ```
-🧠 ZAI Core initialized — AI brain is online.
-[Learning] Stored: goal -> to make Indonesia an AI powerhouse
-[Recall] goal: to make Indonesia an AI powerhouse
-```
-
----
-
-## 📦 Project Structure
-
-```text
-ZAI-Core/
-│
-├── zaicore/
-│   ├── __init__.py          # exposes ZAICore class
-│   ├── core.py              # main brain logic
-│   └── utils/
-│       └── data_handler.py  # data cleaner & helper tools
-│
-├── docs/                    # documentation (architecture, notes)
-├── tests/                   # unit tests
-├── setup.py
-├── setup.cfg
-└── README.md
+🧠 ZAI Core v0.2.0 initialized — Persistent Brain Online.
+[Learning] Stored: mission -> to build adaptive AI frameworks
+[Learning] Stored: creator -> Muhammad Zaidan
+[Recall] mission: to build adaptive AI frameworks
+[Recall] creator: Muhammad Zaidan
 ```
 
 ---
 
-## ⚙️ Development Roadmap
-
-| Version | Description                                  | Status         |
-| ------- | -------------------------------------------- | -------------- |
-| v0.1.0  | Base learning & recall logic                 | ✅ Released    |
-| v0.2.0  | Add save/load memory (persistent brain)      | 🧩 In Progress |
-| v0.3.0  | Command-line interface & plugin support      | ⏳ Planned     |
-| v1.0.0  | Stable release with documentation & web demo | 🚀 Future      |
-
----
-
-## 💻 Local Installation for Development
+## 🧠 CLI Mode
+> You can now talk to ZAI Core directly from your terminal.
 
 ```bash
-git clone https://github.com/muhammadzaidanf/ZAI-Core.git
-cd ZAI-Core
-pip install -e .
+python -m zaicore
 ```
 
-Then test:
+**Example Interaction:**
+```
+🚀 Launching ZAI Core v0.2.0 — CLI Mode
+🧠 ZAI Core v0.2.0 initialized — Persistent Brain Online.
+Type 'exit' to quit.
 
+🧠 > learn name = Zaidan
+[Learning] Stored: name -> Zaidan
+
+🧠 > recall name
+[Recall] name: Zaidan
+
+🧠 > forget name
+[Forget] Key 'name' removed from memory.
+
+🧠 > wipe
+🧹 All memory wiped clean.
+
+🧠 > exit
+👋 Shutting down ZAI Core...
+```
+
+---
+
+## ⚙️ Developer Notes
+ZAI Core stores all learned data in a file called:
+```
+./zai_memory.json
+```
+
+To reset everything manually:
 ```bash
-python
->>> from zaicore import ZAICore
->>> ai = ZAICore()
->>> ai.learn("vision", "build adaptive AI systems")
->>> ai.recall("vision")
+rm zai_memory.json
 ```
 
 ---
 
-## 🧩 Example Use Case Ideas
+## 🧩 Development Roadmap
 
-- 🗣️ AI Chat Agent using ZAI Core as the reasoning engine
-- 🤖 Embedded “thinking core” for robotics or IoT
-- 🧮 NLP and logic-based experimentations
-- 🎓 Teaching material for AI fundamentals
-
----
-
-## 🧠 Philosophy
-
-> “ZAI Core isn’t just another framework —  
-> it’s a blueprint to understand how intelligence grows.”  
-> — _Muhammad Zaidan Faiz_
+| Version | Feature | Status |
+|----------|----------|--------|
+| **v0.1.0** | Basic AI learn & recall system | ✅ Released |
+| **v0.2.0** | Persistent Brain + CLI Mode | 🧠 Active |
+| **v0.3.0** | Chat Interface + Plugin Loader | 🔜 Planned |
 
 ---
 
 ## 🧑‍💻 Author
-
 **Muhammad Zaidan Faiz**  
 💼 [LinkedIn](https://www.linkedin.com/in/mzaidanfaiz/)  
 🌍 [GitHub](https://github.com/muhammadzaidanf)  
@@ -138,15 +148,14 @@ python
 ---
 
 ## 📄 License
-
-This project is released under the **MIT License** — free for personal and educational use.
+Released under the **MIT License** — free to learn, modify, and expand.
 
 ---
 
 <div align="center">
-  
-⭐ *If you find this project useful, consider giving it a star on GitHub.*  
+
+⭐ *ZAI Core — The brain that never forgets.*  
 <br>
-💬 *“The goal isn’t to look smart — it’s to become unstoppable.”*
+💬 *“Don’t just build AI. Build something that learns with you.”*
 
 </div>
