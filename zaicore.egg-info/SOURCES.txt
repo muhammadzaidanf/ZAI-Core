@@ -5,6 +5,7 @@ setup.py
 zaicore/__init__.py
 zaicore/__main__.py
 zaicore/core.py
+zaicore/network.py
 zaicore/reasoning.py
 zaicore.egg-info/PKG-INFO
 zaicore.egg-info/SOURCES.txt

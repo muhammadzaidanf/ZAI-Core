@@ -1,7 +1,7 @@
 Metadata-Version: 2.4
 Name: zaicore
-Version: 0.2.2
-Summary: ZAI Core — Cognitive AI Framework with Contextual Reasoning and Persistent Memory
+Version: 0.2.3
+Summary: ZAI Core — Networked Intelligence Framework with Persistent and Cloud Memory
 Home-page: https://github.com/muhammadzaidanf/ZAI-Core
 Author: Muhammad Zaidan
 Author-email: muhammadzaidanfaiz8@gmail.com
@@ -9,7 +9,6 @@ Classifier: Programming Language :: Python :: 3
 Classifier: License :: OSI Approved :: MIT License
 Classifier: Operating System :: OS Independent
 Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
-Classifier: Intended Audience :: Developers
 Requires-Python: >=3.8
 Description-Content-Type: text/markdown
 License-File: LICENSE

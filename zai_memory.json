@@ -1,5 +1,10 @@
 {
     "mission": "to build adaptive AI frameworks",
     "creator": "Muhammad Zaidan",
-    "name": "zaidan"
+    "name": "zaidan",
+    "motto": {
+        "count": 1,
+        "value": " explore beyond limits",
+        "learned_at": "2025-11-10 10:38:49"
+    }
 }
