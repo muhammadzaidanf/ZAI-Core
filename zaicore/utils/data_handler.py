@@ -1,6 +1,4 @@
-import json
-import os
-
+import json, os
 
 def load_memory(path):
     """Load memory file if exists, else return new blank memory."""
@@ -8,7 +6,6 @@ def load_memory(path):
         with open(path, "r", encoding="utf-8") as f:
             return json.load(f)
     return {}
-
 
 def save_memory(data, path):
     """Save current memory data to file."""
