@@ -1,7 +1,7 @@
 <div align="center">
 
 # 🧠 ZAI Core  
-### *v0.2.3 — Networked Intelligence Update*
+### *v0.2.4 — Adaptive Intelligence Update*
 
 ![PyPI](https://img.shields.io/pypi/v/zaicore?label=PyPI%20Version&style=for-the-badge&color=blue)
 ![Python](https://img.shields.io/badge/python-3.8%2B-green?style=for-the-badge)
@@ -14,19 +14,19 @@
 ---
 
 ## 🧩 Overview
-**ZAI Core v0.2.3** brings the **Networked Intelligence Update** — connecting local AI memory with remote cloud systems.  
-Now ZAI Core can **sync memory online**, **load plugins**, and **merge offline knowledge with live data**.
+**ZAI Core v0.2.4** introduces the **Adaptive Intelligence Update**, evolving beyond static learning.  
+This version enables **auto-learning**, **reinforcement tracking**, and **insight analytics**, allowing ZAI Core to analyze itself and grow smarter over time.
 
-> “From thinking… to connecting.”
+> “Now it learns by itself — not just when you tell it to.”
 
 ---
 
-## ⚙️ New in v0.2.3
-- 🌐 **Remote Memory Sync** — link AI memory to an online API endpoint.  
-- 🔌 **Plugin System** — integrate tools like `websearch` or external APIs.  
-- 💬 **Hybrid Chat Mode** — use local + remote knowledge in conversation.  
-- 🧠 **Diagnostics Command** — view AI status and sync info in CLI.  
-- 🔧 **Improved Reasoning Engine** — better matching and context recognition.  
+## ⚙️ New in v0.2.4
+- 🧠 **Auto-Learn Engine** — automatically saves unknown queries as pending knowledge.  
+- 🔁 **Reinforcement Tracker** — increases confidence score each time a fact is recalled.  
+- 📊 **Insight Analyzer** — tracks learning statistics, recall frequency, and confidence.  
+- ⚙️ **Config File Support (`zai_config.json`)** — customize default modes (remote, auto-learn).  
+- 🌐 **Persistent + Networked Sync** — hybrid AI that works both offline and online.  
 
 ---
 
@@ -34,13 +34,15 @@ Now ZAI Core can **sync memory online**, **load plugins**, and **merge offline k
 ```text
 ./ZAI-Core/
 │
+├── ./zai_config.json          # config file for remote/auto-learn options
 ├── ./zaicore/
 │   ├── ./__init__.py
 │   ├── ./__main__.py
-│   ├── ./core.py              # Main brain (offline + remote memory)
-│   ├── ./reasoning.py         # Contextual recall logic
-│   ├── ./network.py           # Handles API sync for remote memory
-│   ├── ./plugins/             # Plugin directory
+│   ├── ./core.py              # Adaptive learning core
+│   ├── ./analytics.py         # Insight and reinforcement system
+│   ├── ./reasoning.py         # Contextual recall engine
+│   ├── ./network.py           # Remote API sync system
+│   ├── ./plugins/
 │   │   ├── ./__init__.py
 │   │   └── ./websearch_connector.py
 │   └── ./utils/
@@ -62,45 +64,64 @@ pip install zaicore
 ---
 
 ## ⚡ Quick Start
-### Local Mode
+
+### 🧠 Local Mode
 ```python
 from zaicore import ZAICore
 
 ai = ZAICore()
-ai.learn("mission", "to build adaptive AI frameworks")
-ai.recall("mission")
+ai.learn("creator", "Muhammad Zaidan")
+ai.recall("who created you?")
 ```
 
-### Remote Mode
+### 🌐 Remote Mode (optional)
 ```python
 ai = ZAICore(remote_mode=True, remote_url="https://example.com/zai_core_api")
-ai.learn("language", "Python")
+ai.learn("framework", "ZAI Core")
 ```
 
-Output:
+### ⚙️ Auto-Learn
+If the AI doesn’t recognize something, it will store it as pending knowledge automatically:
 ```
-🌐 Loading remote memory ...
-⬇️  Remote memory downloaded.
-🧠 ZAI Core v0.2.3 initialized — Networked Intelligence Online.
-[Learning] language → Python
-🌐 Memory synced remotely.
+🧠 > who is zaidan
+🤖 I don't know that yet. Saved as pending knowledge.
 ```
 
 ---
 
-## 🧠 CLI Usage
-Run directly from terminal:
-```bash
-python -m zaicore --remote
+## 💬 CLI Commands
+```
+learn key=value     → store knowledge
+recall <query>      → ask the AI
+list | ls           → show all memory entries
+insights            → show memory insights & confidence stats
+stats               → show engine statistics
+config              → show current configuration
+set key=value       → change config (auto_learn, remote_mode, remote_url)
+wipe                → delete all memory
+exit                → quit
 ```
 
-Example session:
+---
+
+## 📊 Insight Example
 ```
-🚀 ZAI Core CLI v0.2.3 — Networked Intelligence Mode
-🧠 > learn motto = explore beyond limits
-🌐 Memory synced remotely.
-🧠 > status
-ZAI Core v0.2.3 | Remote: True | Entries: 1
+🧠 > insights
+📊 Insight Summary:
+- Total entries: 18
+- Most recalled: creator (4x)
+- Average confidence: 0.83
+```
+
+---
+
+## ⚙️ Config File Example (`zai_config.json`)
+```json
+{
+  "remote_mode": false,
+  "remote_url": "https://example.com/zai_core_api",
+  "auto_learn": true
+}
 ```
 
 ---
@@ -111,8 +132,9 @@ ZAI Core v0.2.3 | Remote: True | Entries: 1
 | **v0.1.0** | Basic Learn & Recall | ✅ Released |
 | **v0.2.1** | Persistent Brain | ✅ Released |
 | **v0.2.2** | Cognitive Layer | ✅ Released |
-| **v0.2.3** | Networked Intelligence | 🧠 Active |
-| **v0.3.0** | Plugin API + Cloud Dashboard | 🔜 Planned |
+| **v0.2.3** | Networked Intelligence | ✅ Released |
+| **v0.2.4** | Adaptive Intelligence | 🧠 Active |
+| **v0.3.0** | Neural Bridge (Web Dashboard + Plugin API) | 🔜 Planned |
 
 ---
 
@@ -125,14 +147,14 @@ ZAI Core v0.2.3 | Remote: True | Entries: 1
 ---
 
 ## 📄 License
-Released under the **MIT License** — free to learn, modify, and expand.
+Released under the **MIT License** — free to learn, modify, and build upon.
 
 ---
 
 <div align="center">
 
-⭐ *ZAI Core — The brain that connects.*  
+⭐ *ZAI Core — Adaptive Intelligence Framework.*  
 <br>
-💬 *“Don’t just build AI. Build something that learns and grows beyond limits.”*
+💬 *“Don’t just build AI. Build something that adapts and evolves with you.”*
 
 </div>
