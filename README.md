@@ -7,6 +7,8 @@
 ![Python](https://img.shields.io/badge/python-3.8%2B-green?style=for-the-badge)
 ![License](https://img.shields.io/github/license/muhammadzaidanf/ZAI-Core?style=for-the-badge)
 ![Made in Indonesia](https://img.shields.io/badge/Made%20in-Indonesia-red?style=for-the-badge)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/muhammadzaidanf/ZAI-Core?style=for-the-badge)
+
 
 </div>
 
